@@ -1,0 +1,23 @@
+h1{
+    font-family: 'raleway', sans-serif;
+}
+
+svg{
+    color: rgba(255, 255, 255, 0.65);
+}
+
+#email{
+    color: white !important;
+    max-width: 62vh;
+}
+
+#password{
+    color: white !important;
+    
+    max-width: 62vh;
+}
+.login-form-button{
+    /* max-width: 62vh; */
+    position: absolute;
+    left:34%;
+}
