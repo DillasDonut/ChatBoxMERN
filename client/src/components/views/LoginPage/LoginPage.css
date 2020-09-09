@@ -8,16 +8,22 @@ svg{
 
 #email{
     color: white !important;
+    background: white !important;
     max-width: 62vh;
 }
 
 #password{
     color: white !important;
-    
+    background: white !important;
     max-width: 62vh;
 }
 .login-form-button{
     /* max-width: 62vh; */
     position: absolute;
-    left:34%;
+    left:35%;
+    color:#61E58E;
+}
+
+.btnText{
+    color:#61E58E !important;
 }

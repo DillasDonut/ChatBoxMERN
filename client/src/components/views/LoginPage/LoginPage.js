@@ -130,13 +130,13 @@ function LoginPage(props) {
                   Mot de passe oublié ?
                   </a> */}
                 <div>
-                  <Button size="large" type="primary" htmlType="submit" className="login-form-button" style={{ backgroundColor: "#61E58E", border:"none", color: "#344354" }} disabled={isSubmitting} onSubmit={handleSubmit}>
-                    Log in
+                  <Button size="large" type="primary" htmlType="submit" className="login-form-button"  disabled={isSubmitting} onSubmit={handleSubmit}>
+                  <span class="btnText">Log in</span>
                   </Button>
                 </div>
                 <div style={{ display:"block" }}>
-                  <Checkbox id="rememberMe" onChange={handleRememberMe} checked={rememberMe} style={{ color:"#ffffff"}} >Se souvenir de moi</Checkbox>
-                  <p style={{ float:'right', color:'white'}}> Ou <a>s'enregistrer</a></p>
+                  <Checkbox id="rememberMe" onChange={handleRememberMe} checked={rememberMe} style={{ color:"#ffffff"}} >Remember me !</Checkbox>
+                  <p style={{ float:'right', color:'white'}}> Ou <a><b>s'enregistrer</b></a></p>
                 </div>
               </Form.Item>
             </form>

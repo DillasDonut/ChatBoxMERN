@@ -16,8 +16,6 @@ export function getChats(){
 }
 
 export function afterPostMessage(data){
-    
-    
     return {
         type: AFTER_POST_MESSAGE,
         payload: data

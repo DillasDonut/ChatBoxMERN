@@ -52,20 +52,13 @@ export class ChatPage extends Component {
 
     onDrop = (files) => {
         console.log(files)
-
-
         if (this.props.user.userData && !this.props.user.userData.isAuth) {
             return alert('Please Log in first');
         }
-
-
-
         let formData = new FormData();
-
         const config = {
             header: { 'content-type': 'multipart/formData' }
         }
-
         formData.append("file", files[0])
 
         Axios.post('api/chat/uploadfiles', formData, config)
@@ -93,14 +86,9 @@ export class ChatPage extends Component {
 
     submitChatMessage = (e) => {
         e.preventDefault();
-
         if (this.props.user.userData && !this.props.user.userData.isAuth) {
             return alert('Please Log in first');
         }
-
-
-
-
         let chatMessage = this.state.chatMessage
         let userId = this.props.user.userData._id
         let userName = this.props.user.userData.name;
@@ -155,7 +143,7 @@ export class ChatPage extends Component {
                         </Col> */} 
                     
                     <Col span={18} >
-                        <div id="chatpar" style={{/* maxWidth:'100vw', */ margin: '24px', float: "right", display:'block' }}>
+                        <div id="chatpar" style={{margin: '24px', float: "right", display:'block' }}>
                             <div className="infinite-container" style={{width:'70vw',  height: '75vh', overflowY: 'scroll', background:'#202332', border:'0px solid', borderRadius:'4px' }}>
                                 {this.props.chats && (
                                     this.renderCards()
@@ -320,3 +308,5 @@ const mapStateToProps = state => {
 
 
 export default connect(mapStateToProps)(ChatPage);
+
+

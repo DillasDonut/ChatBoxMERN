@@ -54,12 +54,11 @@ app.post("/api/chat/uploadfiles", auth ,(req, res) => {
 });
 
 io.on("connection", socket => {
-
   socket.on("Input Chat Message", msg => {
-
     connect.then(db => {
       try {
-          let chat = new Chat({ message: msg.chatMessage, sender:msg.userId, type: msg.type })
+          let chat = new Chat({ message: msg.chatMessage, 
+            sender:msg.userId, type: msg.type })
 
           chat.save((err, doc) => {
             console.log(doc)

@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Route, Switch } from "react-router-dom";
+import {  Route, Switch } from "react-router-dom";
 import Auth from "../hoc/auth";
 // pages routing
 import LandingPage from "./views/LandingPage/LandingPage.js";
@@ -13,7 +13,7 @@ import Test from "./views/Test/Test";
 function App() {
   return (
     <Suspense fallback={(<div>Loading...</div>)}>
-      <div className="content_wrapper" style={{ maxHeight: 'calc(100vh - 80px)', background: '#344354', margin:'0 auto' }}>
+      <div className="content_wrapper">
         <Switch>
           <Route exact path="/" component={Auth(LandingPage, null)} />
           <Route exact path="/chat" component={Auth(ChatPage, null)} />
@@ -26,5 +26,5 @@ function App() {
     </Suspense>
   );
 }
-
 export default App;
+

@@ -99,7 +99,7 @@ function RegisterPage(props) {
         } = props;
         return (
           <div className="app">
-            <h1 style={{ color:"#61D5E5", fontWeight: "bold" }}>S'enregistrer</h1>
+            <h1 style={{ color:"#61D5E5", fontWeight: "bold" }}>Register</h1>
             <Form style={{ minWidth: '30vw' }} {...formItemLayout} onSubmit={handleSubmit} >
 
               <Form.Item required label="Name" style={{ marginLeft:"32px", marginRight:"32px" }}>
@@ -188,8 +188,8 @@ function RegisterPage(props) {
               </Form.Item>
 
               <Form.Item {...tailFormItemLayout} style={{/*  marginLeft:"32px", marginRight:"32px"  */}}>
-                <Button onClick={handleSubmit}  style={{ minWidth: '15.5vw', backgroundColor: "#61E58E", border:"none", color: "#344354"}} type="primary" disabled={isSubmitting}>
-                  Submit
+                <Button onClick={handleSubmit}  size='large' type="primary" className="login-form-button" disabled={isSubmitting}>
+                <span class="btnText">Submit</span>
                 </Button>
               </Form.Item>
             </Form>
